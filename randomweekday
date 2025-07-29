@@ -1,0 +1,48 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class RandomWeekday {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+ Get a number from the user (not used in logic)
+        System.out.print("Enter any number: ");
+        int userInput = scanner.nextInt();
+ Generate a random number between 1 and 7
+        Random random = new Random();
+        int randomNumber = random.nextInt(7) + 1; 
+
+        // Step 3: Map the number to a weekday name
+        String weekday;
+        switch (randomNumber) {
+            case 1:
+                weekday = "Monday";
+                break;
+            case 2:
+                weekday = "Tuesday";
+                break;
+            case 3:
+                weekday = "Wednesday";
+                break;
+            case 4:
+                weekday = "Thursday";
+                break;
+            case 5:
+                weekday = "Friday";
+                break;
+            case 6:
+                weekday = "Saturday";
+                break;
+            case 7:
+                weekday = "Sunday";
+                break;
+            default:
+                weekday = "Invalid";
+        }
+
+        // Step 4: Print output
+        System.out.println("Random number generated: " + randomNumber);
+        System.out.println("Weekday: " + weekday);
+
+        scanner.close();
+    }
+}
