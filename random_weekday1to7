@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class RandomWeekday {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+     
+        System.out.print("Enter any number: ");
+        int userInput = scanner.nextInt();  
+       
+        int dayNumber = random.nextInt(7) + 1;
+
+        String dayName;
+
+        
+        switch (dayNumber) {
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 7:
+                dayName = "Sunday";
+                break;
+            default:
+                dayName = "Invalid";
+        }
+
+        
+        System.out.println("Random number between 1 and 7: " + dayNumber);
+        System.out.println("Day of the week: " + dayName);
+
+        scanner.close();
+    }
+}
